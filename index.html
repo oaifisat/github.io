@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Open Agriculture Initiative - FISAT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3, h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;
+      font-size: 20px;
+      color: #111;
+  }
+  .container {
+      padding: 80px 120px;
+  }
+  .person {
+      border: 10px solid transparent;
+      padding-top: 0px;
+      margin-bottom: 30px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .personal {
+      border: 10px solid transparent;
+      margin-top: 30px;
+      margin-bottom: 0px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .carousel-inner img {
+      -webkit-filter: grayscale(90%);
+      filter: grayscale(90%); /* make all photos black and white */
+      width: 100%; /* Set width to 100% */
+      margin: auto;
+  }
+  .carousel-caption h3 {
+      color: #fff !important;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+      background: #2d2d30;
+      color: #bdbdbd;
+  }
+  .bg-1 h3 {color: #fff;}
+  .bg-1 p {font-style: italic;}
+  .list-group-item:first-child {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+  }
+  .list-group-item:last-child {
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail p {
+      margin-top: 15px;
+      color: #555;
+  }
+  .btn {
+      padding: 10px 20px;
+      background-color: #333;
+      color: #f1f1f1;
+      border-radius: 0;
+      transition: .2s;
+  }
+  .btn:hover, .btn:focus {
+      border: 1px solid #333;
+      background-color: #fff;
+      color: #000;
+  }
+  .modal-header, h4, .close {
+      background-color: #333;
+      color: #fff !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-header, .modal-body {
+      padding: 40px 50px;
+  }
+  .nav-tabs li a {
+      color: #777;
+  }
+  #googleMap {
+      width: 100%;
+      height: 400px;
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+  }
+  .navbar {
+      font-family: Montserrat, sans-serif;
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: #fff !important;
+  }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+      color: #000 !important;
+  }
+  .dropdown-menu li a:hover {
+      background-color: red !important;
+  }
+  footer {
+      background-color: #2d2d30;
+      color: #f5f5f5;
+      padding: 32px;
+  }
+  footer a {
+      color: #f5f5f5;
+  }
+  footer a:hover {
+      color: #777;
+      text-decoration: none;
+  }
+  .form-control {
+      border-radius: 0;
+  }
+  textarea {
+      resize: none;
+  }
+  .navbar-brand {
+    padding: 0px;
+  }
+  .navbar-brand>img {
+    height: 100%;
+    padding: 15px;
+    width: auto;
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><img scr="img/cerlogo.png"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#plants">PLANTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#team">OUR TEAM</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/head1.JPG" alt="tomato" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Tomato</h3>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="img/head2.JPG" alt="tomato" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>Tomato</h3>
+          <p></p>
+        </div>
+      </div>
+
+    <!--  <div class="item">
+        <img src="la.jpg" alt="Los Angeles" width="1200" height="700">
+        <div class="carousel-caption">
+          <h3>LA</h3>
+          <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+        </div>
+      </div>-->
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Container (The Band Section) -->
+<div id="about" class="container text-center">
+  <h3>OPEN AGRICULTURE INITIATIVE - FISAT</h3>
+  <p><em>Doorway to an efficient farming system....</em></p>
+  <p>Open Agriculture Initiative is a project taken up by the Center of Excellence in Robotics and IoT, FISAT inspired from
+  the MIT Media Lab at MIT, Massachusetts. This project aims in achieving a much better farming system by incorporating
+  technologies that enable the production of a healthier and more sustainable food system. Technology is used to provide
+  , protect and maintain optimal growing conditions throughout the development of the crop. In this way, we can acheive
+  optimal use of resources such as water, energy, space, capital and labour.</p>
+  <br>
+
+</div>
+
+<!-- Container (TOUR Section) -->
+<div id="plants" class="bg-1">
+  <div class="container">
+    <h3 class="text-center">PLANT VARIANTS</h3>
+    <p class="text-center">Click image to view details of each plant.</p>
+    <div style="height:10px;"></div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="text-center"><strong>French Beans</strong></p>
+        <a href="#beans" data-toggle="collapse">
+          <img src="img/beans.jpg" class="img-circle person" alt="French Beans" width="255" height="255">
+        </a>
+        <div id="beans" class="collapse">
+          <p>Scientific Name: Phaseolus Vulgaris</p>
+          <p>Seasons Cultivated: cool season</p>
+          <p>Fertilizer used: farm yard manure, NPK</p>
+          <p>Soil Parameters: sandy to heavy clay, light alluvial</p>
+          <p>pH value: 5.5 to 6.5</p>
+          <p>Temperature (celsuis): 15 to 30</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Cabbage</strong></p>
+        <a href="#cabbage" data-toggle="collapse">
+          <img src="img/cabbage.jpg" class="img-circle person" alt="Cabbage" width="255" height="255">
+        </a>
+        <div id="cabbage" class="collapse">
+          <p>Scientific Name: Brassica Oleracea</p>
+          <p>Seasons Cultivated: cool, moist climate, winter</p>
+          <p>Fertilizer used: manure or compost, nitrogen and phsphorous, ammonium sulphate, borax</p>
+          <p>Soil Parameters: sandy loam to clay</p>
+          <p>pH value: 5.5 to 6.5</p>
+          <p>Temperature (celsuis): 18 to 20</p>
+          <p>Rainfall (mm): 380 to 500</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Ladies Finger</strong></p>
+        <a href="#ladiesfinger" data-toggle="collapse">
+          <img src="img/ladiesfinger.jpg" class="img-circle person" alt="Ladies Finger" width="255" height="255">
+        </a>
+        <div id="ladiesfinger" class="collapse">
+          <p>Scientific Name: Abelmoschus Esculentus</p>
+          <p>Seasons Cultivated: summer, monsoon</p>
+          <p>Fertilizer used: farm yard manure, NPK, P2O5, K2O</p>
+          <p>Soil Parameters: sandy loam or loose clay loam</p>
+          <p>pH value: 6 to 8</p>
+          <p>Temperature (celsuis): above 20</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Snake Gourd</strong></p>
+        <a href="#snake-gourd" data-toggle="collapse">
+          <img src="img/snake-gourd.jpg" class="img-circle person" alt="Snake Gourd" width="255" height="255">
+        </a>
+        <div id="snake-gourd" class="collapse">
+          <p>Scientific Name: Lagenaria Siceraria</p>
+          <p>Seasons Cultivated: summer and rainy</p>
+          <p>Fertilizer used: well decomposed farmyard manure, nitrogen, P2O5, K2O</p>
+          <p>Soil Parameters: sandy loam soil</p>
+          <p>pH value: 6.5 to 8</p>
+          <p>Temperature (celsuis): hot and moist</p>
+        </div>
+      </div>
+    </div>
+      <div class="row">
+            <div class="col-sm-3">
+              <p class="text-center"><strong>Tomato</strong></p>
+              <a href="#tomato" data-toggle="collapse">
+                <img src="img/tomato.jpg" class="img-circle person" alt="Tomato" width="255" height="255">
+              </a>
+              <div id="tomato" class="collapse">
+                <p>Scientific Name: Solanum Lycopersicum</p>
+                <p>Seasons Cultivated: warm seasons</p>
+                <p>Fertilizer used: rotten organic matter like cowdung, carbofuran or neem cake</p>
+                <p>Soil Parameters: clay loam to silt loam, or well drained sandy loam</p>
+                <p>pH value: 7 to 8</p>
+                <p>Temperature (celsuis): 21 to 30</p>
+                <p>Rainfall (mm): 50 to 150</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <p class="text-center"><strong>Eggplant</strong></p>
+              <a href="#brinjal" data-toggle="collapse">
+                <img src="img/brinjal.jpg" class="img-circle person" alt="Eggplant" width="255" height="255">
+              </a>
+              <div id="brinjal" class="collapse">
+                <p>Scientific Name: Solanum Melongena</p>
+                <p>Seasons Cultivated: warm season</p>
+                <p>Fertilizer used: rotten farmyard manure, nitrogen, phosphorous</p>
+                <p>Soil Parameters: well drained, rich, clay</p>
+                <p>pH value: 5 to 7</p>
+                <p>Temperature (celsuis): 20 to 28</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <p class="text-center"><strong>Spinach</strong></p>
+              <a href="#spinach" data-toggle="collapse">
+                <img src="img/spinach.jpg" class="img-circle person" alt="Spinach" width="255" height="255">
+              </a>
+              <div id="spinach" class="collapse">
+                <p>Scientific Name: Spinacia Oleracea</p>
+                <p>Seasons Cultivated: winter, mild temperature</p>
+                <p>Fertilizer used: farmyard manure, Nitrogen, P2O5</p>
+                <p>Soil Parameters: sandy loam</p>
+                <p>pH value: 6 to 7.5</p>
+                <p>Temperature (celsuis): 15 to 20</p>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <p class="text-center"><strong>Beetroot</strong></p>
+              <a href="#beetroot" data-toggle="collapse">
+                <img src="img/beetroot.jpg" class="img-circle person" alt="Beetroot" width="255" height="255">
+              </a>
+              <div id="beetroot" class="collapse">
+                <p>Scientific Name: Beta Vulgaris</p>
+                <p>Seasons Cultivated: monsoon, year in if enough water present</p>
+                <p>Fertilizer used: organic manure and inorganic fertilizers, NPK</p>
+                <p>Soil Parameters: well drained, loose, loamy to sandy</p>
+                <p>pH value: 6 to 7</p>
+                <p>Temperature (celsuis): 18 to 25</p>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-sm-3">
+                <p class="text-center"><strong>Orange</strong></p>
+                <a href="#orange" data-toggle="collapse">
+                  <img src="img/orange.jpg" class="img-circle person" alt="Orange" width="255" height="255">
+                </a>
+                <div id="orange" class="collapse">
+                  <p>Scientific Name: Citrus sinensis</p>
+                  <p>Seasons Cultivated: spring, from March to April</p>
+                  <p>Fertilizer used: phosphorous and complete fertilizers</p>
+                  <p>Soil Parameters: high hammock or pineland that drains well</p>
+                  <p>pH value: 6 to 7.5</p>
+                  <p>Temperature (celsuis): 12 to 37</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p class="text-center"><strong>Chilli</strong></p>
+                <a href="#chilli" data-toggle="collapse">
+                  <img src="img/chilly.jpg" class="img-circle person" alt="Chilli" width="255" height="255">
+                </a>
+                <div id="chilli" class="collapse">
+                  <p>Scientific Name: Capsicum Annuum L</p>
+                  <p>Seasons Cultivated: warm, hot and humid</p>
+                  <p>Fertilizer used: NPK</p>
+                  <p>Soil Parameters: well drained loamy soils</p>
+                  <p>pH value: 5.5 to 6.8</p>
+                  <p>Temperature (celsuis): 20 to 30</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p class="text-center"><strong>Cauliflower</strong></p>
+                <a href="#cauliflower" data-toggle="collapse">
+                  <img src="img/cauliflower.jpg" class="img-circle person" alt="Cauliflower" width="255" height="255">
+                </a>
+                <div id="cauliflower" class="collapse">
+                  <p>Scientific Name: Brassica Oleracea</p>
+                  <p>Seasons Cultivated: preferably full sunny</p>
+                  <p>Fertilizer used: farm yard manure, NPK</p>
+                  <p>Soil Parameters: deep loamy soil</p>
+                  <p>pH value: 5 to 6</p>
+                  <p>Temperature (celsuis): 15 to 20</p>
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <p class="text-center"><strong>Pepper</strong></p>
+                <a href="#pepper" data-toggle="collapse">
+                  <img src="img/pepper.jpg" class="img-circle person" alt="Pepper" width="255" height="255">
+                </a>
+                <div id="pepper" class="collapse">
+                  <p>Scientific Name: Piper nigrum</p>
+                  <p>Seasons Cultivated: June to December</p>
+                  <p>Fertilizer used: NPK, groundnut cake and neem cake</p>
+                  <p>Soil Parameters: clay loam, red loam, sandy loam, lateritic soil</p>
+                  <p>pH value: 5 to 7</p>
+                  <p>Temperature (celsuis): 15 to 40</p>
+                  <p>Rainfall (mm): 1500 to 2500</p>
+                </div>
+              </div>
+            </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Capsicum</strong></p>
+        <a href="#capsicum" data-toggle="collapse">
+          <img src="img/capsicum.jpg" class="img-circle person" alt="Capsicum" width="255" height="255">
+        </a>
+        <div id="capsicum" class="collapse">
+          <p>Scientific Name: Capsicum Annuum</p>
+          <p>Seasons Cultivated: before monsoon, or year in in greenhouse</p>
+          <p>Fertilizer used: farm yard manure, NPK</p>
+          <p>Soil Parameters: well drained, clay loam soil</p>
+          <p>pH value: 5.5 to 7</p>
+          <p>Temperature (celsuis): 22 to 25</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Cucumber</strong></p>
+        <a href="#cucumber" data-toggle="collapse">
+          <img src="img/cucumber.jpg" class="img-circle person" alt="Cucumber" width="255" height="255">
+        </a>
+        <div id="cucumber" class="collapse">
+          <p>Scientific Name: Cucumis Sativus</p>
+          <p>Seasons Cultivated: moderate warm temperature</p>
+          <p>Fertilizer used: well decomposed farmyard manure, nitrogen, phosphorous</p>
+          <p>Soil Parameters: sandy loam, clay loam</p>
+          <p>pH value: 6 to 7</p>
+          <p>Temperature (celsuis): 20 to 26</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Pumpkin</strong></p>
+        <a href="#pumpkin" data-toggle="collapse">
+          <img src="img/pumpkin.jpg" class="img-circle person" alt="Pumpkin" width="255" height="255">
+        </a>
+        <div id="pumpkin" class="collapse">
+          <p>Scientific Name: Curcubita Pepo, Curcubita Maxima</p>
+          <p>Seasons Cultivated: summer and rainy seasons</p>
+          <p>Fertilizer used: well decomposed farmyard manure, nitrogen, phosphorous</p>
+          <p>Soil Parameters: loam, sandy loam, clay loam</p>
+          <p>pH value: 6 to 7</p>
+          <p>Temperature (celsuis): 18 to 30</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Garlic</strong></p>
+        <a href="#garlic" data-toggle="collapse">
+          <img src="img/garlic.jpg" class="img-circle person" alt="Garlic" width="255" height="255">
+        </a>
+        <div id="garlic" class="collapse">
+          <p>Scientific Name: Allium Sativum</p>
+          <p>Seasons Cultivated: summer and winter</p>
+          <p>Fertilizer used: farm yard manure, NPK</p>
+          <p>Soil Parameters: well drained loamy soils</p>
+          <p>pH value: 6 to 7</p>
+          <p>Temperature (celsuis): Moderate temperature</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Carrot</strong></p>
+        <a href="#carrot" data-toggle="collapse">
+          <img src="img/carrot.jpg" class="img-circle person" alt="Carrot" width="255" height="255">
+        </a>
+        <div id="carrot" class="collapse">
+          <p>Scientific Name: Daucus Carota</p>
+          <p>Seasons Cultivated: cool season</p>
+          <p>Fertilizer used: rotten farmyard manure, NPK, ZnSO4</p>
+          <p>Soil Parameters: deep, loose, loamy</p>
+          <p>pH value: 6 to 7.5</p>
+          <p>Temperature (celsuis): 17 to 24</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Mint</strong></p>
+        <a href="#mint" data-toggle="collapse">
+          <img src="img/mint.jpg" class="img-circle person" alt="Mint" width="255" height="255">
+        </a>
+        <div id="mint" class="collapse">
+          <p>Scientific Name: Mentha</p>
+          <p>Seasons Cultivated: hot and sunny</p>
+          <p>Fertilizer used: farm yard manure, NPK</p>
+          <p>Soil Parameters: red or black soil, sandy loam or loam</p>
+          <p>pH value: 6 to 8.5</p>
+          <p>Temperature (celsuis): 20 to 40</p>
+          <p>Rainfall (mm): 100-120</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Bitter Gourd</strong></p>
+        <a href="#bitter-gourd" data-toggle="collapse">
+          <img src="img/bitter-gourd.jpg" class="img-circle person" alt="Bitter Gourd" width="255" height="255">
+        </a>
+        <div id="bitter-gourd" class="collapse">
+          <p>Scientific Name: Momordica Charantia</p>
+          <p>Seasons Cultivated: warm</p>
+          <p>Fertilizer used: rotten farmyard manure, N, P2O5, K2O</p>
+          <p>Soil Parameters: sandy loam</p>
+          <p>pH value: 6.5 to 7</p>
+          <p>Temperature (celsuis): 25 to 30</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Aloe Vera</strong></p>
+        <a href="#aloe-vera" data-toggle="collapse">
+          <img src="img/aloe-vera.jpg" class="img-circle person" alt="Aloe Vera" width="255" height="255">
+        </a>
+        <div id="aloe-vera" class="collapse">
+          <p>Scientific Name: Aloe Barbadensis Miller</p>
+          <p>Seasons Cultivated: dry and hot climate</p>
+          <p>Fertilizer used: organic fertilizer, NPK</p>
+          <p>Soil Parameters: black cotton soil, well drained loamy or sandy loam</p>
+          <p>pH value: upto 8</p>
+          <p>Temperature (celsuis): 20 to 25</p>
+          <p>Rainfall (mm): goes well with little rainfall</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Sweet Potato</strong></p>
+        <a href="#sweet-potato" data-toggle="collapse">
+          <img src="img/sweet-potato.jpeg" class="img-circle person" alt="Sweet Potato" width="255" height="255">
+        </a>
+        <div id="sweet-potato" class="collapse">
+          <p>Scientific Name: Ipomoea Batatas</p>
+          <p>Seasons Cultivated: warm and humid climate</p>
+          <p>Fertilizer used: composed nitrogen, P2O5, K2O</p>
+          <p>Soil Parameters: loose friable soil</p>
+          <p>pH value: 5.8 to 6.6</p>
+          <p>Temperature (celsuis): 22 to 28</p>
+          <p>Rainfall (mm): 75 to 150</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Lettuce</strong></p>
+        <a href="#lettuce" data-toggle="collapse">
+          <img src="img/lettuce.jpg" class="img-circle person" alt="Lettuce" width="255" height="255">
+        </a>
+        <div id="lettuce" class="collapse">
+          <p>Scientific Name: Lactuca Sativa</p>
+          <p>Seasons Cultivated: cool season</p>
+          <p>Fertilizer used: garden composed, NPK</p>
+          <p>Soil Parameters: rich friable and well drained</p>
+          <p>pH value: 5.8 to 6.5</p>
+          <p>Temperature (celsuis): 12 to 20</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Amaranth</strong></p>
+        <a href="#amaranth" data-toggle="collapse">
+          <img src="img/amaranth.jpg" class="img-circle person" alt="Amaranth" width="255" height="255">
+        </a>
+        <div id="amaranth" class="collapse">
+          <p>Scientific Name: Amaranthus Spp</p>
+          <p>Seasons Cultivated: warm seasons</p>
+          <p>Fertilizer used: farm yard manure, nitrogen, phosphorous, potash, foliar spray (1% urea)</p>
+          <p>Soil Parameters: well drained loamy soil</p>
+          <p>pH value: 5.5 to 7.5</p>
+          <p>Temperature (celsuis): 18 to 25</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Green Peas</strong></p>
+        <a href="#green-peas" data-toggle="collapse">
+          <img src="img/green-peas.jpg" class="img-circle person" alt="Green Peas" width="255" height="255">
+        </a>
+        <div id="green-peas" class="collapse">
+          <p>Scientific Name: Pisum Sativum</p>
+          <p>Seasons Cultivated: year in controlled environment like greenhouse</p>
+          <p>Fertilizer used: farm yard manure, NPK</p>
+          <p>Soil Parameters: well drained loamy soil</p>
+          <p>pH value: 6 to 7.5</p>
+          <p>Temperature (celsuis): 12 to 18</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Cassava</strong></p>
+        <a href="#cassava" data-toggle="collapse">
+          <img src="img/cassava.png" class="img-circle person" alt="Cassava" width="255" height="255">
+        </a>
+        <div id="cassava" class="collapse">
+          <p>Scientific Name: Manihot Esculenta</p>
+          <p>Seasons Cultivated: warm, humid</p>
+          <p>Fertilizer used: organic manure, NPK</p>
+          <p>Soil Parameters: deep sandy loam soils</p>
+          <p>pH value: 5.5 to 6.5</p>
+          <p>Temperature (celsuis): 25 to 30</p>
+          <p>Rainfall (mm): 600 to 4000</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Ridge Gourd</strong></p>
+        <a href="#ridge-gourd" data-toggle="collapse">
+          <img src="img/ridge-gourd.jpg" class="img-circle person" alt="Ridge Gourd" width="255" height="255">
+        </a>
+        <div id="ridge-gourd" class="collapse">
+          <p>Scientific Name: Luffa</p>
+          <p>Seasons Cultivated: throughout the year</p>
+          <p>Fertilizer used: well decomposed farmyard manure, nitrogen, phosphorous</p>
+          <p>Soil Parameters: well drained sandy loam soil</p>
+          <p>pH value: 6 to 7.5</p>
+          <p>Temperature (celsuis): 24 to 30</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Potato</strong></p>
+        <a href="#potato" data-toggle="collapse">
+          <img src="img/potato.jpg" class="img-circle person" alt="Potato" width="255" height="255">
+        </a>
+        <div id="potato" class="collapse">
+          <p>Scientific Name: Solanum Tuberosum</p>
+          <p>Seasons Cultivated: cool season</p>
+          <p>Fertilizer used: NPK, garden compost</p>
+          <p>Soil Parameters: deep, well drained friable</p>
+          <p>pH value: 6 to 6.5</p>
+          <p>Temperature (celsuis): 21 to 25</p>
+        </div>
+      </div>
+      <div class="col-sm-3">
+        <p class="text-center"><strong>Drumstick</strong></p>
+        <a href="#drumstick" data-toggle="collapse">
+          <img src="img/drumstick.jpg" class="img-circle person" alt="Drumstick" width="255" height="255">
+        </a>
+        <div id="drumstick" class="collapse">
+          <p>Scientific Name: Moringa Oleifera</p>
+          <p>Seasons Cultivated: dry and arid</p>
+          <p>Fertilizer used: urea, superphosphate, MOP</p>
+          <p>Soil Parameters: well drained sandy or loamy</p>
+          <p>pH value: 6.2 to 7</p>
+          <p>Temperature (celsuis): 25 to 32</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">×</button>
+          <h4><span class="glyphicon glyphicon-lock"></span> Tickets</h4>
+        </div>
+        <div class="modal-body">
+          <form role="form">
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-shopping-cart"></span> Tickets, $23 per person</label>
+              <input type="number" class="form-control" id="psw" placeholder="How many?">
+            </div>
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Send To</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+              <button type="submit" class="btn btn-block">Pay
+                <span class="glyphicon glyphicon-ok"></span>
+              </button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal">
+            <span class="glyphicon glyphicon-remove"></span> Cancel
+          </button>
+          <p>Need <a href="#">help?</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container">
+  <h3 class="text-center">Contact</h3>
+  <p class="text-center"><em>For any queries or feedback, feel free to contact us!</em></p>
+
+  <div class="row">
+    <div class="col-md-4">
+      <p><span class="glyphicon glyphicon-map-marker">&nbsp;</span>Kochi, Kerala</p>
+      <p><span class="glyphicon glyphicon-phone">&nbsp;</span>Phone: +91 9567381690</p>
+      <p><span class="glyphicon glyphicon-envelope">&nbsp;</span>Email: oai.fisat@gmail.com</p>
+    </div>
+    <div class="col-md-8">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+      <br>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Trigger the modal with a button -->
+
+  <div id="team">
+    <br><br>
+    <div class="row"><h3 class="text-center">TEAM MEMBERS</h3></div>
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/sinan.png" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Ahmmed Sinan</strong></h5>
+        <h5 class="text-center" ><strong>BTech CSE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/aishwarya.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Aishwarya Lakshmi</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/aiswarya.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Aiswarya Arun</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/akhil.png" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Akhil Joy</strong></h5>
+        <h5 class="text-center"><strong>BTech CSE, FISAT</strong></h5>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/amrith.png" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Amrith Aathmaram</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/ankitha.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Ankitha Girish</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/athira.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Athira Aravind</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/chandana.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Chandana S</strong></h5>
+        <h5 class="text-center"><strong>BTech CSE, FISAT</strong></h5>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/flemin.jpg" class="img-circle personal" alt="Flemin" width="200" height="200">
+        </a>
+        <h5 class="text-center"><strong>Flemin Johnson</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/job.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Job Jacob</strong></h5>
+        <h5 class="text-center"><strong>BTech CSE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/john.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>John Mathai</strong></h5>
+        <h5 class="text-center"><strong>BTech ME, FISAT</strong></h5>
+      </div>
+
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/madhu.jpeg" class="img-circle personal" alt="Drumstick" width="100" height="100">
+        </a>
+        <h5 class="text-center"><strong>Madhu Krishna</strong></h5>
+        <h5 class="text-center"><strong>BTech EEE, FISAT</strong></h5>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/medha.png" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Medha Surendran</strong></h5>
+        <h5 class="text-center"><strong>BTech EEE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/meh.png" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Mehjebin Mujeeb</strong></h5>
+        <h5 class="text-center"><strong>BTech CSE, FISAT</strong></h5>
+      </div>
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/shimon.png" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Shimon Payyannadan</strong></h5>
+        <h5 class="text-center"><strong>BTech ME, FISAT</strong></h5>
+      </div>
+
+      <div class="col-md-3 col-lg-3">
+        <a href="#" data-toggle="collapse">
+          <img src="img/vibitha.jpeg" class="img-circle personal" alt="Drumstick" width="255" height="255">
+        </a>
+        <h5 class="text-center"><strong>Vibitha Venugopal</strong></h5>
+        <h5 class="text-center"><strong>BTech ECE, FISAT</strong></h5>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+<!-- Footer -->
+<footer class="text-center">
+  <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="BACK TO TOP">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+</footer>
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+
+</body>
+</html>
