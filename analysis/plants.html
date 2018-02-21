@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Open Agriculture Initiative - FISAT</title>
+	<link href="http://172.16.4.24/data/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="http://172.16.4.24/data/css/datepicker3.css" rel="stylesheet">
+	<link href="http://172.16.4.24/data/css/styles.css" rel="stylesheet">
+	<link href="http://172.16.4.24/data/styles/ihover.css" rel="stylesheet">
+
+	<!--Custom Font-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+	<!--[if lt IE 9]>
+	<script src="js/html5shiv.js"></script>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sidebar-collapse"><span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span></button>
+				<a class="navbar-brand" href="#">FISAT <span>Open Agriculture Initiative</span></a>
+				<ul class="nav navbar-top-links navbar-right">
+					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+						<em class="fa fa-bell"></em><span class="label label-info">0</span>
+					</a>
+						<ul class="dropdown-menu dropdown-alerts">
+							<li><a href="#">
+								<div><em class="fa fa-envelope"></em>
+									<span class="pull-right text-muted small"></span></div>
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#">
+								<div><em class="fa fa-envelope"></em>
+									<span class="pull-right text-muted small"></span></div>
+							</a></li>
+							<li class="divider"></li>
+							<li><a href="#">
+								<div><em class="fa fa-envelope"></em>
+									<span class="pull-right text-muted small"></span></div>
+							</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
+		<div class="profile-sidebar">
+			<div class="profile-userpic">
+				<img src="http://172.16.4.24/data/img/admin.png" class="img-responsive" alt="">
+			</div>
+			<div class="profile-usertitle">
+				<div class="profile-usertitle-name">Admin</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="divider"></div>
+		<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search">
+			</div>
+		</form>
+		<ul class="nav menu">
+			<li><a href="index.html"><em class="fa fa-home">&nbsp;</em> Home</a></li>
+			<!--<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>
+			<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
+			<li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>-->
+			<li><a href="settings.html"><em class="fa fa-cog">&nbsp;</em> Settings</a></li>
+			<li class="active"><a href="plants.html"><em class="fa fa-leaf">&nbsp;</em> Plants</a></li>
+			<li><a href="bags.html"><em class="fa fa-file">&nbsp;</em> Bags</a></li>
+			<li><a href="valves.html"><em class="fa fa-unlink">&nbsp;</em> Valves</a></li>
+			<li><a href="springler.html"><em class="fa fa-empire">&nbsp;</em> Springler</a></li>
+			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+		</ul>
+	</div><!--/.sidebar-->
+
+	<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+		<div class="row">
+			<ol class="breadcrumb">
+				<li><a href="#">
+					<em class="fa fa-leaf"></em>
+				</a></li>
+				<li class="active">Plants</li>
+			</ol>
+		</div><!--/.row-->
+			<div style="height:0px;"></div>
+		<div>
+			<h2>Plant Variants</h2>
+			<div class="panel panel-plants" style="border-collapse: collapse;">
+				<div class="row">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/ladiesfinger.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Ladies Finger</div>
+								<div class="text-muted no-padding hover-display">2 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="ladiesfinger-LF01.html">BAG LF01</a></li>
+											<li><a href="ladiesfinger-LF02.html">BAG LF02</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/tomato.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Tomato</div>
+								<div class="text-muted no-padding hover-display">6 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="tomato-T01.html">BAG T01</a></li>
+											<li><a href="tomato-T02.html">BAG T02</a></li>
+											<li><a href="tomato-T03.html">BAG T03</a></li>
+											<li><a href="tomato-T04.html">BAG T04</a></li>
+											<li><a href="tomato-T05.html">BAG T05</a></li>
+											<li><a href="tomato-T06.html">BAG T06</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/cauliflower.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Cauliflower</div>
+								<div class="text-muted no-padding hover-display">8 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="cauliflower-CF01.html">BAG CF01</a></li>
+											<li><a href="cauliflower-CF02.html">BAG CF02</a></li>
+											<li><a href="cauliflower-CF03.html">BAG CF03</a></li>
+											<li><a href="cauliflower-CF04.html">BAG CF04</a></li>
+											<li><a href="cauliflower-CF05.html">BAG CF05</a></li>
+											<li><a href="cauliflower-CF06.html">BAG CF06</a></li>
+											<li><a href="cauliflower-CF07.html">BAG CF07</a></li>
+											<li><a href="cauliflower-CF08.html">BAG CF08</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/spinach.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Spinach</div>
+								<div class="text-muted no-padding hover-display">4 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="spinach-S01.html">BAG S01</a></li>
+											<li><a href="spinach-S02.html">BAG S02</a></li>
+											<li><a href="spinach-S03.html">BAG S03</a></li>
+											<li><a href="spinach-S04.html">BAG S04</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/.row-->
+				<div class="row">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/chilly.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Chilly</div>
+								<div class="text-muted no-padding hover-display">5 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="chilly-CL01.html">BAG CL01</a></li>
+											<li><a href="chilly-CL02.html">BAG CL02</a></li>
+											<li><a href="chilly-CL03.html">BAG CL03</a></li>
+											<li><a href="chilly-CL04.html">BAG CL04</a></li>
+											<li><a href="chilly-CL05.html">BAG CL05</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/brinjal.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Brinjal</div>
+								<div class="text-muted no-padding hover-display">5 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="brinjal-BJ01.html">BAG BJ01</a></li>
+											<li><a href="brinjal-BJ02.html">BAG BJ02</a></li>
+											<li><a href="brinjal-BJ03.html">BAG BJ03</a></li>
+											<li><a href="brinjal-BJ04.html">BAG BJ04</a></li>
+											<li><a href="brinjal-BJ05.html">BAG BJ05</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/beans.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Beans</div>
+								<div class="text-muted no-padding hover-display">4 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="beans-BN01.html">BAG BN01</a></li>
+											<li><a href="beans-BN02.html">BAG BN02</a></li>
+											<li><a href="beans-BN03.html">BAG BN03</a></li>
+											<li><a href="beans-BN04.html">BAG BN04</a></li>
+											<li><a href="beans-BN05.html">BAG BN05</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/cabbage.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Cabbage</div>
+								<div class="text-muted no-padding hover-display">3 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="cabbage-CB01.html">BAG CB01</a></li>
+											<li><a href="cabbage-CB02.html">BAG CB02</a></li>
+											<li><a href="cabbage-CB03.html">BAG CB03</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/.row-->
+				<div class="row">
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/orange.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Orange</div>
+								<div class="text-muted no-padding hover-display">1 BAG</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="#">BAG O01</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/beetroot.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Beetroot</div>
+								<div class="text-muted no-padding hover-display">1 BAG</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="beetroot-BR01.html">BAG BR01</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/snake-gourd.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Snake Gourd</div>
+								<div class="text-muted no-padding hover-display">2 BAGS</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="snake-gourd-SG01.html">BAG SG01</a></li>
+											<li><a href="snake-gourd-SG02.html">BAG SG02</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-6 col-md-3 col-lg-3 no-padding bordering1 hovering">
+						<div class="panel panel-blue panel-widget" style="height:170px;">
+							<div class="row no-padding">
+								<img src="http://172.16.4.24/data/img/pepper.png" style="height:50px; width:50px;">
+								<div class="large no-padding">Pepper</div>
+								<div class="text-muted no-padding hover-display">1 BAG</div>
+								<div class="vd">
+									<div class="dropdown center-block">
+										<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+											<span  style="font-size:0.82em;">Select bag to view Dashboard&nbsp;</span>
+											<span class="caret"></span>
+										</button>
+										<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+											<li><a href="pepper-P01.html">BAG P01</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div><!--/.row-->
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-1 col-lg-1"></div>
+			<div class="col-md-4 col-lg-4">
+				<div class="text-center"><h3><b>Add Plants</b></h3></div>
+				<form id="ajax-login-form" action="#" method="post" role="form" autocomplete="off">
+						<div class="form-group">
+								<label for="username">Image Name</label>
+								<input type="text" name="username" id="imageName" tabindex="1" class="form-control" placeholder="Enter the image name...." value="" autocomplete="off">
+						</div>
+
+						<div class="form-group">
+								<label for="bagNo">Bag Number</label>
+								<input type="text" name="bagNo" id="bagNo" tabindex="2" class="form-control" placeholder="Enter the bag number...." autocomplete="off">
+						</div>
+						<div class="dropup">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Plant Type
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+						<div class="form-group">
+								<div class="row">
+										<div class="col-xs-5 pull-right">
+												<input type="submit" name="login-submit" id="add-plants-submit" tabindex="4" class="form-control btn btn-primary" value="Submit">
+										</div>
+								</div>
+						</div>
+
+
+						<input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+				</form>
+			</div>
+			<div class="col-md-2 col-lg-2"></div>
+			<div class="col-md-4 col-lg-4">
+				<div class="text-center"><h3><b>Remove Plants</b></h3></div>
+				<form id="ajax-login-form" action="#" method="post" role="form" autocomplete="off">
+						<div class="form-group">
+								<label for="username">Image Name</label>
+								<input type="text" name="username" id="imageName" tabindex="1" class="form-control" placeholder="Enter the image name...." value="" autocomplete="off">
+						</div>
+
+						<div class="form-group">
+								<label for="bagNo">Bag Number</label>
+								<input type="text" name="bagNo" id="bagNo" tabindex="2" class="form-control" placeholder="Enter the bag number...." autocomplete="off">
+						</div>
+						<div class="dropup">
+						  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						    Plant Type
+						    <span class="caret"></span>
+						  </button>
+						  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+						    <li><a href="#">Action</a></li>
+						    <li><a href="#">Another action</a></li>
+						    <li><a href="#">Something else here</a></li>
+						    <li role="separator" class="divider"></li>
+						    <li><a href="#">Separated link</a></li>
+						  </ul>
+						</div>
+						<div class="form-group">
+								<div class="row">
+										<div class="col-xs-5 pull-right">
+												<input type="submit" name="login-submit" id="remove-plants-submit" tabindex="4" class="form-control btn btn-primary" value="Submit">
+										</div>
+								</div>
+						</div>
+
+
+						<input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
+				</form>
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+	<script src="http://172.16.4.24/data/js/jquery-1.11.1.min.js"></script>
+	<script src="http://172.16.4.24/data/js/bootstrap.min.js"></script>
+	<script src="http://172.16.4.24/data/js/chart.min.js"></script>
+	<script src="http://172.16.4.24/data/js/chart-data.js"></script>
+	<script src="http://172.16.4.24/data/js/easypiechart.js"></script>
+	<script src="http://172.16.4.24/data/js/easypiechart-data.js"></script>
+	<script src="http://172.16.4.24/data/js/bootstrap-datepicker.js"></script>
+	<script src="http://172.16.4.24/data/js/custom.js"></script>
+	<script>
+		window.onload = function () {
+	var chart_air = document.getElementById("line-chart-air").getContext("2d");
+	window.myLine = new Chart(chart_air).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+	var chart_temperature = document.getElementById("line-chart-temperature").getContext("2d");
+	window.myLine = new Chart(chart_temperature).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+	var chart_humidity = document.getElementById("line-chart-humidity").getContext("2d");
+	window.myLine = new Chart(chart_humidity).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+};
+	</script>
+
+</body>
+</html>
